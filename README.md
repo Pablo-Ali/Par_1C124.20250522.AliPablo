@@ -1,1 +1,1 @@
-# C124_P1_PabloAli
+Primer parcial de Programación 2, Comisión 124
