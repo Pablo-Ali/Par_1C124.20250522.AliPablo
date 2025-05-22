@@ -38,11 +38,11 @@ public class SistemaGestionExpedicionesEspaciales {
                     break;
 
                 case 2:
-                    
+                    mostrarNaves(listaNaves);
                     break;
 
                 case 3:
-                    
+                    iniciarExploracion(listaNaves);
                     break;
 
                 case 4:
@@ -117,6 +117,7 @@ public class SistemaGestionExpedicionesEspaciales {
 
                     if (compararExistente(nave, listaNaves)) {
                         listaNaves.add(nave);
+                        System.out.println("Nave cargada correctamente");
                     } else {
                         System.out.println("\nLa nave ya existe");
                     }
@@ -152,6 +153,7 @@ public class SistemaGestionExpedicionesEspaciales {
                     
                     if (compararExistente(nave, listaNaves)) {
                         listaNaves.add(nave);
+                        System.out.println("Nave cargada correctamente");
                     } else {
                         System.out.println("\nLa nave ya existe");
                     }
@@ -188,6 +190,7 @@ public class SistemaGestionExpedicionesEspaciales {
                     
                     if (compararExistente(nave, listaNaves)) {
                         listaNaves.add(nave);
+                        System.out.println("Nave cargada correctamente");
                     } else {
                         System.out.println("\nLa nave ya existe");
                     }
@@ -198,5 +201,31 @@ public class SistemaGestionExpedicionesEspaciales {
                     System.out.println("Opción no válida");
             }
         } while (opcion != 4);
+    }
+    
+    public static void mostrarNaves(List<Nave> listaNaves){
+        if (listaNaves.isEmpty()) {
+            System.out.println("Aun no hay naves registradas");
+        } else {
+            System.out.println("\n---Naves Registradas---\n");
+            for (int i = 0; i < listaNaves.size(); i++) {
+                System.out.println(listaNaves.get(i).toString());
+            }
+        }
+    }
+    
+    public static void iniciarExploracion(List<Nave> listaNaves){
+        if (listaNaves.isEmpty()) {
+            System.out.println("Aun no hay naves registradas");
+        } else {
+            System.out.println("\n---Iniciar Exploración---\n");
+            for (Nave n : listaNaves){
+                if(n instanceof Explorador){
+                    ((Explorador) n).explorar();
+                }else{
+                    System.out.println("El crucero estelar " + n.getNombre() + " no puede realizar exploraciones");
+                }
+            }
+        }
     }
 }
