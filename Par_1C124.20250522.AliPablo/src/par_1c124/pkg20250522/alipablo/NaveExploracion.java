@@ -28,7 +28,7 @@ public class NaveExploracion extends Nave implements Explorador{
     
     @Override
     public String toString(){
-        return "Nave de Exploración [Nombre: " + nombre + " Cap. Tripulación: " + capacidadTripulacion + " Año Lanzamiento: " + anioLanzamiento + " Misión: " + mision + "]";
+        return "Nave de Exploración [Nombre: " + nombre + " | Cap. Tripulación: " + capacidadTripulacion + " | Año Lanzamiento: " + anioLanzamiento + " | Misión: " + mision + "]";
     }
 
 }

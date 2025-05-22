@@ -48,7 +48,7 @@ public class SistemaGestionExpedicionesEspaciales {
                     break;
 
                 case 4:
-                    
+                    ordenarPorNombre(listaNaves);
                     break;
 
                 case 5:
@@ -112,6 +112,7 @@ public class SistemaGestionExpedicionesEspaciales {
                     }while(capacidadTripulacion < 1);
                     
                     //falta validar
+                    
                     System.out.println("Ingrese el año del lanzamiento");
                     anioLanzamiento = console.nextInt();
                     
@@ -231,8 +232,16 @@ public class SistemaGestionExpedicionesEspaciales {
         }
     }
     
-    public static void ordenarPorNombre(){
-        
+    public static void ordenarPorNombre(List<Nave> listaNaves){
+        if (listaNaves.isEmpty()) {
+            System.out.println("Aun no hay naves registradas");
+        } else {
+            Collections.sort(listaNaves);
+            System.out.println("Lista de naves ordenadas alfabéticametne");
+            for (Nave n : listaNaves){
+                System.out.println("Nave: " + n.getNombre());
+            }
+        }
     }
     
     public static void ordenarPorAnio(List<Nave> listaNaves, ComparadorAnio comparador){
@@ -247,7 +256,7 @@ public class SistemaGestionExpedicionesEspaciales {
         }
     }
     
-    public static void ordenarPorTripulantes(){
+    public static void ordenarPorTripulantes(List<Nave> listaNaves){
         
     }
 }

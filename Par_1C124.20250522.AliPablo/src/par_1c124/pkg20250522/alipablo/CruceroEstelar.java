@@ -22,6 +22,6 @@ public class CruceroEstelar extends Nave{
     
     @Override
     public String toString(){
-        return "Nave de Exploración [Nombre: " + nombre + " Cap. Tripulación: " + capacidadTripulacion + " Año Lanzamiento: " + anioLanzamiento + " Pasajeros: " + cantidadPasajeros + "]";
+        return "Nave de Exploración [Nombre: " + nombre + " | Cap. Tripulación: " + capacidadTripulacion + " | Año Lanzamiento: " + anioLanzamiento + " | Pasajeros: " + cantidadPasajeros + "]";
     }
 }

@@ -30,6 +30,6 @@ public class Carguero extends Nave implements Explorador{
     
     @Override
     public String toString(){
-        return "Carguero [Nombre: " + nombre + " Cap. Tripulación: " + capacidadTripulacion + " Año Lanzamiento: " + anioLanzamiento + " Capacidad de carga: " + capacidadCarga + "]";
+        return "Carguero [Nombre: " + nombre + " | Cap. Tripulación: " + capacidadTripulacion + " | Año Lanzamiento: " + anioLanzamiento + " | Capacidad de carga: " + capacidadCarga + "]";
     }
 }
