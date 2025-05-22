@@ -54,10 +54,6 @@ public class Nave implements Comparable<Nave>{
         return this.nombre.compareTo(otra.getNombre());
     }
     
-    /*
-    @Override
-    public int compareTo (Nave otra){
-        return Integer.compare(otra.getAnioLanzamiento(), this.anioLanzamiento);
-    }
-    */
+
+
 }

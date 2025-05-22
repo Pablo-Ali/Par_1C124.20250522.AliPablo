@@ -56,7 +56,7 @@ public class SistemaGestionExpedicionesEspaciales {
                     break;
                 
                 case 6:
-                    
+                    ordenarPorTripulantes(listaNaves, new ComparadorTripulantes());
                     break;
                     
                 default:
@@ -256,7 +256,15 @@ public class SistemaGestionExpedicionesEspaciales {
         }
     }
     
-    public static void ordenarPorTripulantes(List<Nave> listaNaves){
-        
+    public static void ordenarPorTripulantes(List<Nave> listaNaves, ComparadorTripulantes comparador){
+        if (listaNaves.isEmpty()) {
+            System.out.println("Aun no hay naves registradas");
+        } else {
+            Collections.sort(listaNaves, comparador);
+            System.out.println("Lista de naves ordenadas por mayor cantidad de tripulantes");
+            for (Nave n : listaNaves){
+                System.out.println("Tripulantes: " + n.getCapacidadTripulacion() + " | Nave: " + n.getNombre());
+            }
+        }
     }
 }
