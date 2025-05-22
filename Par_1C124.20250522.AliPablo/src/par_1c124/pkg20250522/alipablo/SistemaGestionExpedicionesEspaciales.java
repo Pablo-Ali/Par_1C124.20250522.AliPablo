@@ -1,6 +1,8 @@
 package par_1c124.pkg20250522.alipablo;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -50,7 +52,7 @@ public class SistemaGestionExpedicionesEspaciales {
                     break;
 
                 case 5:
-                    
+                    ordenarPorAnio(listaNaves, new ComparadorAnio());
                     break;
                 
                 case 6:
@@ -166,7 +168,7 @@ public class SistemaGestionExpedicionesEspaciales {
                     do{
                         System.out.println("Ingrese la cantidad de pasajeros");
                         cantidadPasajeros = console.nextInt();
-                    }while(cantidadPasajeros < 0);
+                    }while(cantidadPasajeros < 1); //debe tener al menos un pasajero
                     
                     // Consumo el salto de linea del nextInt
                     console.nextLine();       
@@ -227,5 +229,25 @@ public class SistemaGestionExpedicionesEspaciales {
                 }
             }
         }
+    }
+    
+    public static void ordenarPorNombre(){
+        
+    }
+    
+    public static void ordenarPorAnio(List<Nave> listaNaves, ComparadorAnio comparador){
+        if (listaNaves.isEmpty()) {
+            System.out.println("Aun no hay naves registradas");
+        } else {
+            Collections.sort(listaNaves, comparador);
+            System.out.println("Lista de naves ordenadas por lanzamiento más reciente");
+            for (Nave n : listaNaves){
+                System.out.println("Año: " + n.getAnioLanzamiento() + " | Nave: " + n.getNombre());
+            }
+        }
+    }
+    
+    public static void ordenarPorTripulantes(){
+        
     }
 }

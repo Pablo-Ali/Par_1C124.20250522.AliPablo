@@ -4,7 +4,7 @@ package par_1c124.pkg20250522.alipablo;
  *
  * @author pablo
  */
-public class Nave {
+public class Nave implements Comparable<Nave>{
     protected String nombre;
     protected int capacidadTripulacion;
     protected int anioLanzamiento;
@@ -46,5 +46,11 @@ public class Nave {
 
         Nave nave = (Nave) obj;
         return this.nombre.equalsIgnoreCase(nave.nombre) && this.anioLanzamiento == nave.anioLanzamiento;
+    }
+    
+    //seguir despues
+    @Override
+    public int compareTo(Nave otra){
+        return 0;
     }
 }
